@@ -1,5 +1,5 @@
-import Message from "./message"
+import ListGroup from "./components/ListGroup";
 function app(){
-  return <div><Message></Message></div>
+  return <div><ListGroup/></div>
 }
 export default app;
