@@ -8,7 +8,10 @@ function ListGroup() {
     { id: 5, name: "5" }, 
   ];
   items=[];
-  const message=items.length===0 ? <p>No items to display</p> : <p>Items to display</p>;
+  // const message=items.length===0 ? <p>No items to display</p> : <p>Items to display</p>;
+  const getmessage=()=>{
+    items.length===0 ? <p>No items to display</p> : <p>Items to display</p>
+  }
   return (
     <Fragment>
       <h1>List group</h1>
