@@ -8,10 +8,11 @@ function ListGroup() {
     { id: 5, name: "5" }, 
   ];
   items=[];
+  const message=items.length===0 ? <p>No items to display</p> : <p>Items to display</p>;
   return (
     <Fragment>
       <h1>List group</h1>
-      {items.length===0 ? <p>No items to display</p> : <p>Items to display</p>}
+      {message}
       <ul className="list-group">
       {items.map((item) => (
       <li key={item.id}>{item.name}</li>))}
