@@ -1,12 +1,15 @@
 import { Fragment } from "react";
 function ListGroup() {
-  const items = [
+  let items = [
     { id: 1, name: "1" },
     { id: 2, name: "2" },
     { id: 3, name: "3" },
     { id: 4, name: "4" },
     { id: 5, name: "5" }, 
   ];
+  items=[];
+  if (items.length ===0)
+    return <><h1>List group</h1><p>There are no items in the list</p></>; 
   return (
     <Fragment>
       <h1>List group</h1>
