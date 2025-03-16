@@ -1,24 +1,24 @@
 import { Fragment } from "react";
 function ListGroup() {
   let items = [
-    { id: 1, name: "1" },
-    { id: 2, name: "2" },
-    { id: 3, name: "3" },
-    { id: 4, name: "4" },
-    { id: 5, name: "5" }, 
+    { id: 1, name: "guntur" },
+    { id: 2, name: "vijayawada" },
+    { id: 3, name: "amaravathi" },
+    { id: 4, name: "nellore" },
+    { id: 5, name: "vishakapattanam" }, 
   ];
-  items=[];
+  // items=[];
   // const message=items.length===0 ? <p>No items to display</p> : <p>Items to display</p>;
-  const getmessage=()=>{
-    items.length===0 ? <p>No items to display</p> : <p>Items to display</p>
-  }
+  // const getmessage=()=>{
+  //   return items.length===0 ? <p>No items to display</p> : <p>Items to display</p>
+  // }
   return (
     <Fragment>
       <h1>List group</h1>
-      {getmessage}
+      {/* {getmessage} */}
       <ul className="list-group">
       {items.map((item) => (
-      <li key={item.id}>{item.name}</li>))}
+      <li className="list-group-item" key={item.id}>{item.name}</li>))}
       </ul>
     </Fragment>
   );
