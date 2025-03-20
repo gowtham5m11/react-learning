@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import mouseEvent from "react";
+import { Fragment, useState } from "react";
+// import mouseEvent from "react";
 function ListGroup() {
   let items = [
     { id: 1, name: "guntur" },
@@ -8,8 +8,10 @@ function ListGroup() {
     { id: 4, name: "nellore" },
     { id: 5, name: "vishakapattanam" }, 
   ];
-  const eventHandler = (event) => console.log(event);
-  // items=[];
+  const[selectedItem,setSelectedIndex]=useState(-1);
+  // removed below because the are not required for the follown method
+  // const eventHandler = (event) => console.log(event);
+   // items=[];
   // const message=items.length===0 ? <p>No items to display</p> : <p>Items to display</p>;
   // const getmessage=()=>{
   //   return items.length===0 ? <p>No items to display</p> : <p>Items to display</p>
@@ -20,9 +22,9 @@ function ListGroup() {
       {/* {getmessage} */}
       <ul className="list-group">
       {items.map((item, index) => (
-      <li className="list-group-item" 
+      <li className={selectedItem=== index? 'list-group-item active':'list group item'} 
       key={item.id} 
-      onClick={eventHandler}
+      onClick={()=>setSelectedIndex(index)}  
       >{item.name}
       </li>))}
       </ul>
