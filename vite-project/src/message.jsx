@@ -1,7 +1,7 @@
 //pascal scading is a convention for naming components in this case captial M
 function Message(){
     //returning a jsx element
-    var name = "gowtham"
+    var name = "gowtham" 
     if (name == "gowtham"){
         return <h1>hello {name}</h1>
     }
